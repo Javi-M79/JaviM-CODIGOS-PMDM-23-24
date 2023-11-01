@@ -23,7 +23,7 @@ fun main() {
 }
 
 
-fun comprobarNumero(x: Int): Unit {
+fun comprobarNumero(x: Int) {
 
     if (20 % x == 0 || x % 20 == 0) {//Comprobamos que sea multiplo de 20. Incluimos como multiplos numeros mayores de 20.
         if (x > -100 && x < 100) {//Si es asi vemos si esta entre el rango solicitado.
