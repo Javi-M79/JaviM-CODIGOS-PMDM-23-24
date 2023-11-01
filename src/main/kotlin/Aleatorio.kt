@@ -12,24 +12,24 @@ fun main() {
 fun numeroSecreto() {
 
     //Creamos el numero aleatorio
-    val nSecreto = (Math.random() * 10 + 1).toInt()
+    val nSecreto = (Math.random() * 20 + 1).toInt()
     //println("El numero introducido has sido $nSecreto")
     var contador = 0
     var salir = false
     println("Introduce un numero:")
     var nUser = readLine()?.toInt()
-    contador++
+    contador++//Incrementamos el contador en el primer intento, si no no lo contaria.
 
 
     while ((nUser != nSecreto) && !salir) {
 
         println("Lo siento, inténtalo de nuevo")
-        nUser = readLine()?.toInt()
+        nUser = readLine()?.toInt() //Prestar atencion a no volver a crear la variable dentro del bucle, pues seria difernete a la de fuera y no saldriamos a no ser que acertasemos a la primera.
         contador++
 
         if (nUser == nSecreto) {
 
-            println("\"Enhorabuena, has acertado el número en $contador intentos")
+            println("Enhorabuena, has acertado el número en $contador intentos")
 
             println("Quieres volver a jugar? (S/N)")
             val jugar = readLine()
