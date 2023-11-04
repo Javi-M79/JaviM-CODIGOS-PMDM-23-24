@@ -6,11 +6,10 @@ import Clases.Trabajadores
 fun main() {
 
 
-
-    var listaTrabajadores = ArrayList<Trabajadores>()
-    var listaJefes = ArrayList<Jefes>()
-    var listaAsalariados = ArrayList<Asalariados>()
-    var listaAutonomos = ArrayList<Autonomos>()
+    val listaTrabajadores = ArrayList<Trabajadores>()
+    val listaJefes = ArrayList<Jefes>()
+    val listaAsalariados = ArrayList<Asalariados>()
+    val listaAutonomos = ArrayList<Autonomos>()
 
 //INSTANCIA DE UN OBJETO TRABAJADOR GENERAL
 
@@ -32,11 +31,21 @@ fun main() {
     //AUTONOMOS
 
     var at1: Trabajadores = Autonomos("Antonio", "Gonzalez", "4566987P", 14000, true)
-    var at2: Trabajadores = Autonomos("Antonio", "Gonzalez", "4566987P", 14000, true)
-    var at3: Trabajadores = Autonomos("Antonio", "Gonzalez", "4566987P", 14000, true)
+    var at2: Trabajadores = Autonomos("Pepe", "Gutierrez", "12587945U", 14000, true)
+    var at3: Trabajadores = Autonomos("Alberto", "Bermejo", "1185479J", 14000, true)
+
+    listaAutonomos.add(at1 as Autonomos)//Le hago un Cast ya que at1 es de tipo Trabajador y lo incluimos en Autonomos.
+    listaAutonomos.add(at2 as Autonomos)
+    listaAutonomos.add(at3 as Autonomos)
+
+    for (i in listaAutonomos){
+        println(i.mostrarDatos())
+    }
 
 
-    at1.mostrarDatos()
+
+/*    var at2: Trabajadores = Autonomos("Antonio", "Gonzalez", "4566987P", 14000, true)
+ listaAutonomos.add(at2)//En este caso, no nos pide Cast al crearlo directamente de tipo Auntonommos*/
 
 
 //
@@ -44,8 +53,6 @@ fun main() {
 //        println(i)
 //
 //    }
-
-
 
 
 }

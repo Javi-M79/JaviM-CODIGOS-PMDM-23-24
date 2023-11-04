@@ -11,11 +11,9 @@ open class Trabajadores(val nombre: String, val apellidos: String, val dni: Stri
 //Mejorar la aplicacion añadiendo un numero de empleado random.
 
 
-    open fun mostrarDatos(){
+    open fun mostrarDatos():String{
 
-        print("$nombre ")
-        print("$apellidos ")
-        print("$dni ")
+        return return "Nombre: $nombre Apellidos: $apellidos DNI: $dni"
 
     }
 
