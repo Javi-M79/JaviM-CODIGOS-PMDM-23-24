@@ -1,4 +1,4 @@
-// 1.	(MayorQue) Hágase un programa que lea dos enteros y compruebe si el primero es o no mayor que el segundo.
+package Ejercicios// 1.	(MayorQue) Hágase un programa que lea dos enteros y compruebe si el primero es o no mayor que el segundo.
 // En la salida se mostrará “El primero es mayor que el segundo” o “El primero no es mayor que el segundo”.
 
 fun main() {

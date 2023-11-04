@@ -20,7 +20,7 @@ fun main() {
 
     var jefe1: Trabajadores = Jefes("Javier", "Mira", "125664G", 520, 25000)
     var jefe2: Trabajadores = Jefes("Luis", "Perez", "587844L", 100, 6000)
-    var jefe3: Trabajadores = Jefes("Laura", "garcia", "698741J", 200, 10000)
+    var jefe3: Trabajadores = Jefes("Laura", "Garcia", "698741J", 200, 10000)
 
 
     listaJefes.add(jefe1 as Jefes)

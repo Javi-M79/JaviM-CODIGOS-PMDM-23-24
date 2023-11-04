@@ -1,4 +1,4 @@
-//Léase un número entero. Se comprobará si dicho número es o no múltiplo de
+package Ejercicios//Léase un número entero. Se comprobará si dicho número es o no múltiplo de
 //20, y también se comprobará si está o no entre -100 y 100.
 // En la salida se mostrará uno de los siguientes mensajes:
 //“Es múltiplo de 20 y está entre -100 y 100”.
