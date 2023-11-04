@@ -22,6 +22,12 @@ fun main() {
     var jefe2: Trabajadores = Jefes("Luis", "Perez", "587844L", 100, 6000)
     var jefe3: Trabajadores = Jefes("Laura", "garcia", "698741J", 200, 10000)
 
+
+    listaJefes.add(jefe1 as Jefes)
+    listaJefes.add(jefe2 as Jefes)
+    listaJefes.add(jefe3 as Jefes)
+
+
     //ASALARIADOS
 
     var aS1: Trabajadores = Asalariados("Juan", "Menor", "54123689T", 14000, 14, true)
@@ -38,14 +44,22 @@ fun main() {
     listaAutonomos.add(at2 as Autonomos)
     listaAutonomos.add(at3 as Autonomos)
 
-    for (i in listaAutonomos){
+
+//Mostramos la lista de Jefes
+
+    for (i in listaJefes) {
+        println(i.mostrarDatos())
+    }
+
+//Mostramos la lista de autonomos
+
+    for (i in listaAutonomos) {
         println(i.mostrarDatos())
     }
 
 
-
-/*    var at2: Trabajadores = Autonomos("Antonio", "Gonzalez", "4566987P", 14000, true)
- listaAutonomos.add(at2)//En este caso, no nos pide Cast al crearlo directamente de tipo Auntonommos*/
+    /*    var at2: Trabajadores = Autonomos("Antonio", "Gonzalez", "4566987P", 14000, true)
+     listaAutonomos.add(at2)//En este caso, no nos pide Cast al crearlo directamente de tipo Auntonommos*/
 
 
 //

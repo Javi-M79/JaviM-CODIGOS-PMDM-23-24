@@ -13,7 +13,7 @@ open class Trabajadores(val nombre: String, val apellidos: String, val dni: Stri
 
     open fun mostrarDatos():String{
 
-        return return "Nombre: $nombre Apellidos: $apellidos DNI: $dni"
+        return  "Nombre: $nombre, Apellidos: $apellidos, DNI: $dni "
 
     }
 

@@ -6,8 +6,7 @@ class Autonomos(nombre: String, apellidos: String, dni: String, var sueldo: Int,
 
     override fun mostrarDatos(): String {
 
-//        super.mostrarDatos()
-        return "Nombre: $nombre Apellidos: $apellidos DNI: $dni, Sueldo: $sueldo, Contratado: $contratado"
+        return super.mostrarDatos() + "Sueldo: $sueldo, Contratado: $contratado"
 //        print("$contratado" ?: "No contratado")
 
 

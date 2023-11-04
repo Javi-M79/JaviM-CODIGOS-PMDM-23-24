@@ -29,10 +29,11 @@ class Jefes(nombre: String, apellidos: String, dni: String, var acciones: Int, v
     }
 
 
-    override fun mostrarDatos() {
-        super.mostrarDatos()
-        print("$acciones")
-        print("$beneficio")
+    override fun mostrarDatos() :String {
+
+        return super.mostrarDatos() + "Numero de acciones: $acciones, Beneficio: $beneficio. "
+
+
 
 
     }

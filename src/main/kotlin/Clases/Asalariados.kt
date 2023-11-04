@@ -15,11 +15,11 @@ class Asalariados(
 ) : Trabajadores(nombre, apellidos, dni) {
 
 
-    override fun mostrarDatos() {
-        super.mostrarDatos()
-        print("$sueldo ")
-        print("$nPagas ")
-        print(contratado ?: "No contratado")
+
+        override fun mostrarDatos(): String {
+
+//        super.mostrarDatos()
+            return super.mostrarDatos() + "Sueldo: $sueldo, Numero de Pagas: $nPagas, Contratadol: $contratado."
     }
 
 }
