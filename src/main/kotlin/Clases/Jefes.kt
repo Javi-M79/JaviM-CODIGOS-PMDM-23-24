@@ -9,9 +9,15 @@ class Jefes(nombre: String, apellidos: String, dni: String, var acciones: Int, v
         //Mostrar el listado de los trabajadores flitrando por asalariados y autonomos
 
 
-        //Una vez mostrado indicar el DNI del trabajador que va a ser despedido.
+        println("Indique tipo de trabajador desea despedir: Autonomo / Asalariado")
+        val despido = readLine()
 
-        println("Introduzca el numero de empleado del trabajador:")
+        if (despido.equals("Autonomo", ignoreCase = true)) {
+            println()
+        }
+
+
+        //Una vez mostrado indicar el DNI del trabajador que va a ser despedido.
 
 
         //Confirmar que desea eliminar ese trabajador
@@ -23,17 +29,17 @@ class Jefes(nombre: String, apellidos: String, dni: String, var acciones: Int, v
 //    if(despedir.equals ("S")
         //Eliminar de la lista a ese trabajador y añadirlo a un Array de despedidos. Posteriormente se podran volver a contratar.
 
-        println("Esta seguro que desea despedir al trabajador + (numero de empleado)?")// Incluir numero de empleado
+        println("Esta seguro que desea despedir al trabajador + (numero de empleado)?")
+
+        //Finalmente al objetop se le cambia el tipo de contrato a False.
 
 
     }
 
 
-    override fun mostrarDatos() :String {
+    override fun mostrarDatos(): String {
 
         return super.mostrarDatos() + "Numero de acciones: $acciones, Beneficio: $beneficio. "
-
-
 
 
     }

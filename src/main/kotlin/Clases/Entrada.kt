@@ -34,6 +34,11 @@ fun main() {
     var aS2: Trabajadores = Asalariados("Pedro", "Aceituno", "45236987F", 14000, 14, true)
     var aS3: Trabajadores = Asalariados("Antonio", "Gonzalez", "4566987P", 14000, 14, true)
 
+    listaAsalariados.add(aS1 as Asalariados)
+    listaAsalariados.add(aS2 as Asalariados)
+    listaAsalariados.add(aS3 as Asalariados)
+
+
     //AUTONOMOS
 
     var at1: Trabajadores = Autonomos("Antonio", "Gonzalez", "4566987P", 14000, true)
