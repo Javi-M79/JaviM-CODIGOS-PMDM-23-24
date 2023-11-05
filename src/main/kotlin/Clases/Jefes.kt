@@ -4,52 +4,33 @@ class Jefes(nombre: String, apellidos: String, dni: String, var acciones: Int, v
     Trabajadores(nombre, apellidos, dni) {
 
 
-    fun despedir(listaTrabajadores: ArrayList<Trabajadores> = ArrayList<Trabajadores>()) { //Puede recibir como parametro unaArray list de autonomos o asalariados. Utilizar sobrecarga de funciones
+    fun despedir(listaTrabajadores: ArrayList<Trabajadores> = ArrayList<Trabajadores>()) {
 
 
+        println("Eliga el tipo de trabajador que quiere despedir:\n 1. Asalariado. \n 2. Autonomo.")
+        val tipoTrabajador: Int = readln().toInt()
 
-        println("Eliga el tipo de trabajador a despedir: \n  1. - Autonomo \n 2.  Asalariado")
+        when (tipoTrabajador) {
 
+            1 -> {
+                val asalariados = listaTrabajadores.filterIsInstance<Asalariados>()
+                asalariados.forEachIndexed { index, asalariados ->
+                    println("-> ${asalariados.mostrarDatos()}")
+//                for (asalariado in listaTrabajadores) {
+//                    println(asalariado.mostrarDatos())
+//                }
+                }
+            }
 
-                //FILTRAR Y MOSTRAR AUTONOMOS DENTRO DE LA LISTA DE TRABAJADORES
-
-//
-//
-//            }else{
-//                //FILTRAR Y MOSTRASR ASALARIADOS DENTRO DE LA LISTA DE TRABAJADORES
-//
-//            }
-//
-//        //Mostrar el listado de los trabajadores flitrando por asalariados y autonomos
-//
-//
-//        println("Indique tipo de trabajador desea despedir: Autonomo / Asalariado")
-//        val despido = readLine()
-//
-//        if (despido.equals("Autonomo", ignoreCase = true)) {
-//            println()
-//        }
-
-
-        //Una vez mostrado indicar el DNI del trabajador que va a ser despedido.
-
-
-        //Confirmar que desea eliminar ese trabajador
-
-
-//    println("Desea despedir al trabajador? S/N")
-//        var despedir = readLine()
-//
-//    if(despedir.equals ("S")
-        //Eliminar de la lista a ese trabajador y añadirlo a un Array de despedidos. Posteriormente se podran volver a contratar.
-
-        println("Esta seguro que desea despedir al trabajador + (numero de empleado)?")
-
-        //Finalmente al objetop se le cambia el tipo de contrato a False.
-
+            2 -> {
+                val autonomos = listaTrabajadores.filterIsInstance<Autonomos>()
+                autonomos.forEachIndexed { index, autonomos ->
+                    println("${index + 1}-> ${autonomos.mostrarDatos()}")
+                }
+            }
+        }
 
     }
-
 
     override fun mostrarDatos(): String {
 
