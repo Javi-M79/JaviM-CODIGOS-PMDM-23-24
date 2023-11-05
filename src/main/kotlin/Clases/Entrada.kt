@@ -11,6 +11,8 @@ fun main() {
     val listaAsalariados = ArrayList<Asalariados>()
     val listaAutonomos = ArrayList<Autonomos>()
 
+    val gestion: Empresa = Empresa()
+    gestion.registroTrabajadores()
 
     /*
     INSTANCIA DE UN OBJETO TRABAJADOR GENERAL
