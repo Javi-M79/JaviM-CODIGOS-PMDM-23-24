@@ -34,6 +34,8 @@ fun main() {
     listaTrabajadores.add(jefe3)
 
 
+
+
     /*
     Mostramos la lista de Jefes
 
@@ -47,6 +49,13 @@ fun main() {
     var aS2: Trabajadores = Asalariados("Pedro", "Aceituno", "45236987F", 28000, 14, true)
     var aS3: Trabajadores = Asalariados("Antonio", "Gonzalez", "4566987P", 47000, 14, true)
 
+
+//COMPROBACION DEL METODO MOSTRAR DATOS Y DEMAS ATRIBUTOS
+
+//    println(aS2.nombre)
+//    println(aS2.apellidos)
+//    println(aS2.mostrarDatos())
+
     listaAsalariados.add(aS1 as Asalariados)
     listaAsalariados.add(aS2 as Asalariados)
     listaAsalariados.add(aS3 as Asalariados)
@@ -54,11 +63,15 @@ fun main() {
     listaTrabajadores.add(aS2)
     listaTrabajadores.add(aS3)
 
-    /* Mostrar lista Asalariados.
 
-    for (i in listaAsalariados) {
-        println(i.mostrarDatos())
-    }*/
+
+//    Mostrar lista Asalariados.
+
+//    for (i in listaAsalariados) {
+//        println(i.mostrarDatos())
+//    }
+
+
 
 
     //AUTONOMOS
@@ -73,6 +86,8 @@ fun main() {
     listaTrabajadores.add(at1)
     listaTrabajadores.add(at2)
     listaTrabajadores.add(at3)
+
+    jefe1.despedir(listaTrabajadores)
 
     /* Mostrar la lista de autonomos
 
@@ -89,9 +104,9 @@ fun main() {
 //
 //    }
 
-    //FILTRAR LISTAS SEGUN EL TIPO DE TRABAJADOR
 
-    val filtrarTtabajadores = listaTrabajadores.filterIsInstance<Asalariados>()
+
+
 
 
 }
