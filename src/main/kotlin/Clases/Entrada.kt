@@ -18,13 +18,13 @@ fun main() {
     Trabajadores("Javier", "Mira", "12345678L")//Podria decidir si lo paso a Jefe, autonomo, asalariado.
     JEFES
     */
+    //USO DEL POLIMORFISMO
 
     var jefe1: Trabajadores = Jefes("Javier", "Mira", "125664G", 520, 25000)
     var jefe2: Trabajadores = Jefes("Luis", "Perez", "587844L", 100, 6000)
     var jefe3: Trabajadores = Jefes("Laura", "Garcia", "698741J", 200, 10000)
 
-
-    //USO DEL POLIMORFISMO
+//AÑADIR A LISTA ESPECIFICA Y GENERAL DE TRABAJADORES
 
     listaJefes.add(jefe1 as Jefes)
     listaJefes.add(jefe2 as Jefes)
@@ -32,8 +32,6 @@ fun main() {
     listaTrabajadores.add(jefe1)
     listaTrabajadores.add(jefe2)
     listaTrabajadores.add(jefe3)
-
-
 
 
     /*
@@ -63,16 +61,11 @@ fun main() {
     listaTrabajadores.add(aS2)
     listaTrabajadores.add(aS3)
 
+    /*  Mostrar lista Asalariados.
 
-
-//    Mostrar lista Asalariados.
-
-//    for (i in listaAsalariados) {
-//        println(i.mostrarDatos())
-//    }
-
-
-
+      for (i in listaAsalariados) {
+          println(i.mostrarDatos())
+      }*/
 
     //AUTONOMOS
 
@@ -87,7 +80,7 @@ fun main() {
     listaTrabajadores.add(at2)
     listaTrabajadores.add(at3)
 
-    jefe1.despedir(listaTrabajadores)
+
 
     /* Mostrar la lista de autonomos
 
@@ -97,16 +90,15 @@ fun main() {
 
      */
 
-////Mostrar todos los trabajadores registrados.
-//
-//    for (i in listaTrabajadores) {
-//        println(i.mostrarDatos())
-//
-//    }
+//Mostrar todos los trabajadores registrados.
 
+    for (i in listaTrabajadores) {
+        println(i.mostrarDatos())
 
+    }
 
+    //METODO DESPEDIR JEFES
 
-
+    jefe1.despedir(listaTrabajadores)
 
 }

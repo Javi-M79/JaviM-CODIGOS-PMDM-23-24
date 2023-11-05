@@ -13,14 +13,20 @@ class Jefes(nombre: String, apellidos: String, dni: String, var acciones: Int, v
         when (tipoTrabajador) {
 
             1 -> {
+                println("A continuacion s emuestra el listado de Asalariados:")
                 val asalariados = listaTrabajadores.filterIsInstance<Asalariados>()
-                asalariados.forEachIndexed { index, asalariados ->
-                    println("-> ${asalariados.mostrarDatos()}")
-//                for (asalariado in listaTrabajadores) {
-//                    println(asalariado.mostrarDatos())
-//                }
+                asalariados.forEachIndexed { index, asalariado ->
+                    println("${index + 1}-> ${asalariado.mostrarDatos()}")
+
+                }
+                println("Elija el numero de empleado que quiere despedir:")
+                val seleccion: Int = readln().toInt()
+                when (seleccion) { //Mientras se encuentre dentro del rango de la lista??
+
+
                 }
             }
+
 
             2 -> {
                 val autonomos = listaTrabajadores.filterIsInstance<Autonomos>()
@@ -32,12 +38,14 @@ class Jefes(nombre: String, apellidos: String, dni: String, var acciones: Int, v
 
     }
 
+
     override fun mostrarDatos(): String {
 
         return super.mostrarDatos() + "Numero de acciones: $acciones, Beneficio: $beneficio. "
-
-
     }
 
-
 }
+
+
+
+
