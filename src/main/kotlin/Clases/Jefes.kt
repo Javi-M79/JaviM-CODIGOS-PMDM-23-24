@@ -4,17 +4,31 @@ class Jefes(nombre: String, apellidos: String, dni: String, var acciones: Int, v
     Trabajadores(nombre, apellidos, dni) {
 
 
-    fun despedir() { //Puede recibir como parametro unaArray list de autonomos o asalariados. Utilizar sobrecarga de funciones
-
-        //Mostrar el listado de los trabajadores flitrando por asalariados y autonomos
+    fun despedir(listaTrabajadores: ArrayList<Trabajadores> = ArrayList<Trabajadores>()) { //Puede recibir como parametro unaArray list de autonomos o asalariados. Utilizar sobrecarga de funciones
 
 
-        println("Indique tipo de trabajador desea despedir: Autonomo / Asalariado")
-        val despido = readLine()
 
-        if (despido.equals("Autonomo", ignoreCase = true)) {
-            println()
-        }
+        println("Eliga el tipo de trabajador a despedir: \n  1. - Autonomo \n 2.  Asalariado")
+
+
+                //FILTRAR Y MOSTRAR AUTONOMOS DENTRO DE LA LISTA DE TRABAJADORES
+
+//
+//
+//            }else{
+//                //FILTRAR Y MOSTRASR ASALARIADOS DENTRO DE LA LISTA DE TRABAJADORES
+//
+//            }
+//
+//        //Mostrar el listado de los trabajadores flitrando por asalariados y autonomos
+//
+//
+//        println("Indique tipo de trabajador desea despedir: Autonomo / Asalariado")
+//        val despido = readLine()
+//
+//        if (despido.equals("Autonomo", ignoreCase = true)) {
+//            println()
+//        }
 
 
         //Una vez mostrado indicar el DNI del trabajador que va a ser despedido.

@@ -15,11 +15,16 @@ class Asalariados(
 ) : Trabajadores(nombre, apellidos, dni) {
 
 
+    //Funcion calculo salario mensual
+    fun sueldoMensual(sueldo: Int): Int {
+        return sueldo / 12
 
-        override fun mostrarDatos(): String {
+    }
 
-//        super.mostrarDatos()
-            return super.mostrarDatos() + "Sueldo: $sueldo, Numero de Pagas: $nPagas, Contratadol: $contratado."
+    override fun mostrarDatos(): String {
+
+
+        return super.mostrarDatos() + "Sueldo anual: $sueldo, Sueldo mensual: ${sueldoMensual(sueldo)}, Numero de Pagas: $nPagas, Contratado: $contratado."
     }
 
 }
