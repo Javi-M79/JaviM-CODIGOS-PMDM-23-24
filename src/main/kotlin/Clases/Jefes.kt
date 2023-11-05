@@ -24,9 +24,8 @@ class Jefes(nombre: String, apellidos: String, dni: String, var acciones: Int, v
 //            println("Lista de trabajadores despedidos:\n${trabajadorDespedido.mostrarDatos()}")
 
             println("Lista de asalariados actualizada:")
-            for (asalariado in listaAsalariados) {
-                println(asalariado.mostrarDatos())
-            }
+            listaAsalariados.forEach { e -> println(e.mostrarDatos()) }
+
 
         }
 
@@ -36,22 +35,31 @@ class Jefes(nombre: String, apellidos: String, dni: String, var acciones: Int, v
 
     fun despedir(listaTrabajadores: ArrayList<Trabajadores> = ArrayList<Trabajadores>()) {
 
+        var seleccion = readln().toInt()
+        var despedido = seleccion - 1
 
-        println("Eliga el tipo de trabajador que quiere despedir:\n 1. Asalariado. \n 2. Autonomo.")
+        println("Elija el tipo de trabajador que quiere despedir:\n 1. Asalariado. \n 2. Autonomo.")
         val tipoTrabajador: Int = readln().toInt()
-
+        val listaDespedidos = ArrayList<Trabajadores>()
         when (tipoTrabajador) {
 
             1 -> {
-                println("A continuacion s emuestra el listado de Asalariados:")
+                println("A continuacion se muestra el listado de Asalariados:")
                 val asalariados = listaTrabajadores.filterIsInstance<Asalariados>()
                 asalariados.forEachIndexed { index, asalariado ->
                     println("${index + 1}-> ${asalariado.mostrarDatos()}")
 
-                }
-                println("Elija el numero de empleado que quiere despedir:")
-                val seleccion: Int = readln().toInt()
-                when (seleccion) { //Mientras se encuentre dentro del rango de la lista??
+                    if (seleccion in 1..listaTrabajadores.size) {
+
+                        val trabajadorDespedido: Trabajadores = listaTrabajadores.removeAt(despedido)
+
+                        listaDespedidos.add(trabajadorDespedido)
+                        println("Usuario $seleccion con ${trabajadorDespedido.mostrarDatos()} despedido con exito.")
+//                        trabajadorDespedido.contratado = false
+
+                    }
+                    println("Elija el numero de empleado que quiere despedir:")
+                    val seleccion: Int = readln().toInt()
 
 
                 }
