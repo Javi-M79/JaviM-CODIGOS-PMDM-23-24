@@ -11,6 +11,7 @@ fun main() {
     val listaAsalariados = ArrayList<Asalariados>()
     val listaAutonomos = ArrayList<Autonomos>()
 
+
     /*
     INSTANCIA DE UN OBJETO TRABAJADOR GENERAL
 
@@ -33,6 +34,7 @@ fun main() {
     listaTrabajadores.add(jefe2)
     listaTrabajadores.add(jefe3)
 
+//    val listaDespedidos = jefe1.despedirAsalariado(listaAsalariados)
 
     /*
     Mostramos la lista de Jefes
@@ -61,6 +63,9 @@ fun main() {
     listaTrabajadores.add(aS2)
     listaTrabajadores.add(aS3)
 
+    listaTrabajadores.forEach { e -> println(e.mostrarDatos()) }
+
+
     /*  Mostrar lista Asalariados.
 
       for (i in listaAsalariados) {
@@ -81,7 +86,6 @@ fun main() {
     listaTrabajadores.add(at3)
 
 
-
     /* Mostrar la lista de autonomos
 
     for (i in listaAutonomos) {
@@ -92,13 +96,16 @@ fun main() {
 
 //Mostrar todos los trabajadores registrados.
 
-    for (i in listaTrabajadores) {
-        println(i.mostrarDatos())
+//    for (i in listaTrabajadores) {
+//        println(i.mostrarDatos())
+//
+//    }
 
-    }
 
     //METODO DESPEDIR JEFES
 
-    jefe1.despedir(listaTrabajadores)
+    jefe1.despedirAsalariado(listaAsalariados)
+
 
 }
+

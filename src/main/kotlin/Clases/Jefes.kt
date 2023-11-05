@@ -4,6 +4,36 @@ class Jefes(nombre: String, apellidos: String, dni: String, var acciones: Int, v
     Trabajadores(nombre, apellidos, dni) {
 
 
+    fun despedirAsalariado(listaAsalariados: ArrayList<Asalariados>): ArrayList<Asalariados> {
+
+        println("Indique el numero de trabajador que quiere despedir del listado que se muestra a continuacion:")
+
+        val listaDespedidos = ArrayList<Asalariados>()
+        listaAsalariados.forEachIndexed { index, asalariados -> println("${index + 1} .- ${asalariados.mostrarDatos()}") }//Listado de asalariados con indice.
+
+        var seleccion = readln().toInt()
+        var despedido = seleccion - 1
+
+        if (seleccion in 1..listaAsalariados.size) {
+
+            val trabajadorDespedido = listaAsalariados.removeAt(despedido)
+
+            listaDespedidos.add(trabajadorDespedido)
+            println("Usuario $seleccion con ${trabajadorDespedido.mostrarDatos()} despedido con exito.")
+            trabajadorDespedido.contratado = false
+//            println("Lista de trabajadores despedidos:\n${trabajadorDespedido.mostrarDatos()}")
+
+            println("Lista de asalariados actualizada:")
+            for (asalariado in listaAsalariados) {
+                println(asalariado.mostrarDatos())
+            }
+
+        }
+
+        return listaDespedidos
+    }
+
+
     fun despedir(listaTrabajadores: ArrayList<Trabajadores> = ArrayList<Trabajadores>()) {
 
 
